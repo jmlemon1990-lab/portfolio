@@ -70,21 +70,33 @@ const projects = [
   </section>
 
   <section id="about">
-    <h2>About</h2>
-    <p>
-      I started my career as a web developer in 2017, building sites with
-      HTML, CSS, JavaScript, PHP, and WordPress. In 2019 I moved into IT
-      site-support at a government office, where I spent several years
-      maintaining systems and solving hands-on technical problems for staff.
-    </p>
-    <p>
-      I'm now returning to web development, rebuilding my skills with modern
-      tools like Astro and TypeScript, and currently learning React and
-      Tailwind CSS. I hold a BS in Information Technology and bring a mix of
-      practical development experience and real-world IT troubleshooting to
-      every project.
-    </p>
-  </section>
+  <h2>About</h2>
+  <div class="about-wrap">
+    <img
+      src={`${import.meta.env.BASE_URL}photo.jpg`}
+      alt="Portrait of Jay-Mar Lemon"
+      class="about-photo"
+      width="160"
+      height="160"
+      loading="lazy"
+    />
+    <div class="about-text">
+      <p>
+        I started my career as a web developer in 2017, building sites with
+        HTML, CSS, JavaScript, PHP, and WordPress. In 2019 I moved into IT
+        site-support at a government office, where I spent several years
+        maintaining systems and solving hands-on technical problems for staff.
+      </p>
+      <p>
+        I'm now returning to web development, rebuilding my skills with modern
+        tools like Astro and TypeScript, and currently learning React and
+        Tailwind CSS. I hold a BS in Information Technology and bring a mix of
+        practical development experience and real-world IT troubleshooting to
+        every project.
+      </p>
+    </div>
+  </div>
+</section>
 
   <section id="skills">
     <h2>Skills</h2>
@@ -291,5 +303,30 @@ const projects = [
   display: inline-block;
   margin-top: 0.5rem;
   font-weight: 600;
+}
+.about-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.about-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid rgba(128, 128, 128, 0.35);
+  flex-shrink: 0;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.about-text p {
+  margin: 0 0 1rem;
 }
 </style>
